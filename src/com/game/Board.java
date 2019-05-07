@@ -6,18 +6,19 @@ import java.util.List;
 import javafx.event.EventHandler;
 import javafx.geometry.Point2D;
 import javafx.scene.Parent;
+import javafx.scene.effect.Effect;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-
 public class Board extends Parent {
 
     private VBox rows = new VBox();
     private boolean enemy = false;
     public int ships = 5;
+
 
     public Board(boolean enemy, EventHandler<? super MouseEvent> handler) {
         this.enemy = enemy;
@@ -158,7 +159,7 @@ public class Board extends Parent {
 
         public boolean shoot() {
             wasShot = true;
-            setFill(Color.BLACK);
+            setFill(Color.AQUA);
 
             if (ship != null) {
                 ship.hit();
